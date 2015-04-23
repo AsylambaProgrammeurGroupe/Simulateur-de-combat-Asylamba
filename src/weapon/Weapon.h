@@ -24,7 +24,7 @@ private:
 public:
 	Weapon(std::initializer_list<Cannon> const& liste); // utilisation {c1,c2,c3}
 	
-	const Cannon operator[](const size_t& i)const;
+	const Cannon operator[](const std::size_t& i)const;
 	
 	
 	
