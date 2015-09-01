@@ -37,3 +37,6 @@ int Ship::getSoute() const{
 }
 
 
+Ship::Ship(ShipType type):type(type),hull(type.getMaxHull()){
+	
+}

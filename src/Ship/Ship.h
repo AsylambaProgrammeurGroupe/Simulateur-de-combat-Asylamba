@@ -22,6 +22,8 @@ private:
 	
 public:
 	
+	Ship(ShipType type); 
+	
 	virtual ~Ship() = default;
 	Weapon getWeapon() const;
 	double getDefense() const;
