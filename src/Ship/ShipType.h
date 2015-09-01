@@ -14,22 +14,25 @@
 class ShipType{
 	
 private:
-	std::string name;
+	const std::string name;
 	
 	
 	Weapon weapon;
-	double defense;
-	double speed;
-	double maxHull;
-	unsigned int pev; 
-	unsigned int price;
+	const double defense;
+	const double speed;
+	const double maxHull;
+	const unsigned int pev; 
+	const unsigned int price;
 	
+	const std::string idName;
 	
 	
 public:
 	
 	
-	ShipType(const Weapon& weapon,const double& defense,const double& speed,const double& maxHull,const unsigned int& pev,unsigned int price );
+	ShipType(const std::string& name ,const Weapon& weapon,const double& defense,const double& speed,const double& maxHull,const unsigned int& pev,unsigned int price );
+	ShipType(const std::string& name,const std::string& idName,const Weapon& weapon,const double& defense,const double& speed,const double& maxHull,const unsigned int& pev,unsigned int price );
+
 	virtual ~ShipType() = default;
 	
 	
@@ -40,7 +43,10 @@ public:
 	unsigned int getPev() const; 
 	unsigned int getPrice() const;
 	int getSoute() const;
-	
+
+	const std::string& getIdName() const {
+		return idName;
+	}
 };
 
 

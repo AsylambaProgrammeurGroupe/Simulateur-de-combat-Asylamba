@@ -2,7 +2,7 @@
  * Ship.h
  *
  *  Created on: 1 sept. 2015
- *      Author: Bouttefeux
+ *      Author:
  */
 
 #ifndef SHIP_SHIP_H_
@@ -23,7 +23,7 @@ private:
 public:
 	
 	Ship(ShipType type); 
-	
+	Ship(const Ship& ship) = default;
 	virtual ~Ship() = default;
 	Weapon getWeapon() const;
 	double getDefense() const;

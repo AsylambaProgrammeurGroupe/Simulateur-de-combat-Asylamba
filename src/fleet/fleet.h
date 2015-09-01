@@ -2,7 +2,7 @@
  * fleet.h
  *
  *  Created on: 1 sept. 2015
- *      Author: Bouttefeux
+ *      Author:
  */
 
 #ifndef FLEET_FLEET_H_
