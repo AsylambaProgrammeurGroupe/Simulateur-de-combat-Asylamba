@@ -14,6 +14,10 @@ Weapon::Weapon(initializer_list<Cannon> const& liste):vector<Cannon>(liste){
 	
 }
 
+Weapon::Weapon(const std::vector<Cannon>& vect):vector<Cannon>(vect){
+	
+}
+
 const Cannon Weapon::operator[](const size_t& i)const{
 	return (*this)[i];
 }
