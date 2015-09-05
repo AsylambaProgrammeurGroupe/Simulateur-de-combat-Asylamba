@@ -28,7 +28,7 @@ public:
 	
 	const Cannon operator[](const std::size_t& i)const;
 	
-	
+	std::size_t size() const;
 	
 };
 

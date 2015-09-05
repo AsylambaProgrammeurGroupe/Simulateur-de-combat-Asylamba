@@ -21,3 +21,8 @@ Weapon::Weapon(const std::vector<Cannon>& vect):vector<Cannon>(vect){
 const Cannon Weapon::operator[](const size_t& i)const{
 	return (*this)[i];
 }
+
+
+std::size_t Weapon::size() const{
+	return this->vector::size();
+}
