@@ -12,7 +12,7 @@ using namespace std;
 
 
 
-Cannon::Cannon(const unsigned int& nombre,const double& attaque)
+Cannon::Cannon(const double& attaque,const unsigned int& nombre)
 :nombre(nombre),attaque(attaque){
 	
 }

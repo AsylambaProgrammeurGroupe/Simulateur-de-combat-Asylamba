@@ -40,6 +40,18 @@ public:
 	const ShipType& getType() const {
 		return type;
 	}
+	
+	const std::string& getIdName() const {
+		return type.getIdName();
+	}
+
+	const ShipFamily& getFamily() const {
+		return type.getFamily();
+	}
+
+	const std::string& getName() const {
+		return type.getName();
+	}
 };
 
 

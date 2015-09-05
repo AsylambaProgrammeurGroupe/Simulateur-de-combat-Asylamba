@@ -10,7 +10,7 @@
 
 #include <string>
 #include "../weapon/Weapon.h"
-
+#include "ShipFamily.h"
 class ShipType{
 	
 private:
@@ -25,13 +25,14 @@ private:
 	const unsigned int price;
 	
 	const std::string idName;
-	
+	const ShipFamily family;
+	//const unsigned long int soute;
 	
 public:
 	
 	
-	ShipType(const std::string& name ,const Weapon& weapon,const double& defense,const double& speed,const double& maxHull,const unsigned int& pev,unsigned int price );
-	ShipType(const std::string& name,const std::string& idName,const Weapon& weapon,const double& defense,const double& speed,const double& maxHull,const unsigned int& pev,unsigned int price );
+	ShipType(const std::string& name ,const Weapon& weapon,const double& defense,const double& speed,const double& maxHull,const unsigned int& pev,unsigned int price,const ShipFamily& family );
+	ShipType(const std::string& name,const std::string& idName,const Weapon& weapon,const double& defense,const double& speed,const double& maxHull,const unsigned int& pev,unsigned int price,const ShipFamily& family);
 
 	virtual ~ShipType() = default;
 	
@@ -42,10 +43,18 @@ public:
 	double getMaxHull() const;
 	unsigned int getPev() const; 
 	unsigned int getPrice() const;
-	int getSoute() const;
+	const long int getSoute() const;
 
 	const std::string& getIdName() const {
 		return idName;
+	}
+
+	const ShipFamily& getFamily() const {
+		return family;
+	}
+
+	const std::string& getName() const {
+		return name;
 	}
 };
 

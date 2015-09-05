@@ -8,13 +8,13 @@
 #include "ShipType.h"
 using namespace std;
 
-ShipType::ShipType(const std::string& name,const Weapon& weapon,const double& defense,const double& speed,const double& maxHull,const unsigned int& pev,unsigned int price )
-:ShipType(name,name,weapon,defense,speed,maxHull,pev,price){
+ShipType::ShipType(const std::string& name,const Weapon& weapon,const double& defense,const double& speed,const double& maxHull,const unsigned int& pev,unsigned int price,const ShipFamily& family)
+:ShipType(name,family.getName()+":"+name,weapon,defense,speed,maxHull,pev,price,family){
 	
 }
 
-ShipType::ShipType(const std::string& name,const std::string& idName,const Weapon& weapon,const double& defense,const double& speed,const double& maxHull,const unsigned int& pev,unsigned int price )
-:name(name),weapon(weapon),defense(defense),speed(speed),maxHull(maxHull),pev(pev),price(price),idName(idName){
+ShipType::ShipType(const std::string& name,const std::string& idName,const Weapon& weapon,const double& defense,const double& speed,const double& maxHull,const unsigned int& pev,unsigned int price,const ShipFamily& family )
+:name(name),weapon(weapon),defense(defense),speed(speed),maxHull(maxHull),pev(pev),price(price),idName(idName),family(family){
 	
 }
 
@@ -37,6 +37,6 @@ unsigned int ShipType::getPev() const{
 unsigned int ShipType::getPrice() const{
 	return price;
 }
-int ShipType::getSoute() const{
+const long int ShipType::getSoute() const{
 	return 250*getPev();
 }

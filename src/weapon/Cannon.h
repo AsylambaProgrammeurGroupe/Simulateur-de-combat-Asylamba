@@ -17,7 +17,7 @@ private:
 	double attaque;
 	
 public:
-	Cannon(const unsigned int& nombre,const double& attaque);
+	Cannon(const double& attaque,const unsigned int& nombr=1);
 	
 	
 	unsigned int getAttak() const;
