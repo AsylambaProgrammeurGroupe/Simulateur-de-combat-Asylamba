@@ -29,7 +29,13 @@ public:
 	const std::string& getName() const {
 		return name;
 	}
+	
+	
+	
 };
+
+bool operator==(const ShipFamily& s1,const ShipFamily& s2);
+bool operator!=(const ShipFamily& s1,const ShipFamily& s2);
 
 
 

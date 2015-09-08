@@ -11,6 +11,7 @@
 #include <string>
 #include "../weapon/Weapon.h"
 #include "ShipFamily.h"
+#include "../Tech/Tech.h"
 class ShipType{
 	
 private:
@@ -28,6 +29,8 @@ private:
 	const ShipFamily family;
 	//const unsigned long int soute;
 	
+	static const int SoutePevPev;
+	
 public:
 	
 	
@@ -38,12 +41,17 @@ public:
 	
 	
 	Weapon getWeapon() const;
+	double getDefense(const Tech& t) const;
+	double getSpeed(const Tech& t) const;
 	double getDefense() const;
 	double getSpeed() const;
 	double getMaxHull() const;
 	unsigned int getPev() const; 
 	unsigned int getPrice() const;
 	const long int getSoute() const;
+	
+	double getAttack(const size_t& pos,const Tech& t = Tech(ShipFamily(""))) const; //!< retourne l'attaque a une position donner le d'larme
+	unsigned int getNumberOfAttack(const size_t& pos) const; //!< retourne le nombre d'attaque d'un cannon a un positiopn deonner dans le Wapon
 
 	const std::string& getIdName() const {
 		return idName;

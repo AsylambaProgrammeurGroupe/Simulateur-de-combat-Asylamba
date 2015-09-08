@@ -8,8 +8,8 @@
 #ifndef FLEET_FLEET_H_
 #define FLEET_FLEET_H_
 
-#include "../Ship/Ship.h"
-
+#include "../Squadron/Line.h"
+#include "../Tech/TechGroupe.h"
 //typedef std::vector<Squadron> Ligne;
 
 class Fleet{
@@ -23,8 +23,9 @@ private:
 	
 	unsigned short level;
 	
-	//! vecteur contenant les lignes puis les escadreilles
-	//std::vector<std::vector<Ship>> Ships;
+	//! vecteur contenant les lignes 
+	std::vector<Line> Lines;
+	TechGroupe techGroupe;
 	
 public:
 	

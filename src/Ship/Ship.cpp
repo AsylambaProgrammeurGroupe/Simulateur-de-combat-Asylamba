@@ -13,6 +13,13 @@
 Weapon Ship::getWeapon() const{
 	return type.getWeapon();
 }
+double Ship::getDefense(const Tech& t) const{
+	return type.getDefense(t);
+}
+double Ship::getSpeed(const Tech& t) const{
+	return type.getSpeed(t);
+}
+
 double Ship::getDefense() const{
 	return type.getDefense();
 }
