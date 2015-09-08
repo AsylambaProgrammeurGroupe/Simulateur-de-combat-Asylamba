@@ -9,7 +9,6 @@
 #include <iostream>
 using namespace std;
 
-#include "ship/ShipType.h"
 
 int main(int argc, char** argv) {
 	/*try{
